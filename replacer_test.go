@@ -13,7 +13,7 @@ func TestReplaceByCided(t *testing.T) {
 		return
 	}
 	colorStrs := []string{"white", "black", "red", "green", "yellow"}
-	reImg, err := Replace(img, colorStrs, nil, alg.CIDED)
+	reImg, err := Replace(img, colorStrs, nil, alg.CIEDE2000)
 	if err != nil {
 		t.Error(err)
 		return

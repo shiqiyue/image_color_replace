@@ -10,7 +10,7 @@ func cidedColorSimilarity(c1, c2 color.Color) float64 {
 	return ciede.Diff(c1, c2)
 }
 
-func CidedGetSimilarityColor(c1 color.Color, cs []color.Color) color.Color {
+func Ciede2000GetSimilarityColor(c1 color.Color, cs []color.Color) color.Color {
 	if len(cs) == 0 {
 		return c1
 	}

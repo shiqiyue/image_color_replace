@@ -9,9 +9,9 @@ import (
 type ALGO_TYPE int
 
 var (
-	HSV   ALGO_TYPE = 1
-	RGB   ALGO_TYPE = 2
-	CIDED ALGO_TYPE = 3
+	HSV       ALGO_TYPE = 1
+	RGB       ALGO_TYPE = 2
+	CIEDE2000 ALGO_TYPE = 3
 )
 
 func GetSimilarityColor(c1 color.Color, cs []color.Color, algoType ALGO_TYPE, matchCache *cmap.ConcurrentMap[string, color.Color]) color.Color {
@@ -44,8 +44,8 @@ func GetSimilarityColor(c1 color.Color, cs []color.Color, algoType ALGO_TYPE, ma
 	switch algoType {
 	case HSV:
 		similarityColor = HsvGetSimilarityColor(c1, cs)
-	case CIDED:
-		similarityColor = CidedGetSimilarityColor(c1, cs)
+	case CIEDE2000:
+		similarityColor = Ciede2000GetSimilarityColor(c1, cs)
 	case RGB:
 		similarityColor = RgbGetSimilarityColor(c1, cs)
 	}
