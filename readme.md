@@ -44,7 +44,7 @@ if err != nil {
 ## source
 ![sample](./example/test.jpeg)
 
-## replace by cided
+## replace by ciede2000
 ![sample](./example/test_by_cided.jpeg)
 
 ## replace by hsv distance
